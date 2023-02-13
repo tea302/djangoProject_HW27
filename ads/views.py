@@ -65,7 +65,7 @@ class AdListCreateView(View):
 
 @method_decorator(csrf_exempt, name='dispatch')
 class CatListCreateView(View):
-    def gef(self, request):
+    def get(self, request):
         cat_list = Category.objects.all()
         return JsonResponse([{"id": cat.pk,
                               "name": cat.name
